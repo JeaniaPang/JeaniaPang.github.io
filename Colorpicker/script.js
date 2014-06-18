@@ -22,6 +22,14 @@ $(document).on('mouseenter', '.preview',  function(){
  previewColor = $('.preview').css("background-color", previewColor);
 });
 
+$(document).on('mouseenter', '.item',  function(){
+ 	 previewColor = $('.preview').css('background-color');
+ 	  setPreviewColor($(this).css('background-color'));
+}).on('mouseleave', '.item', function() {
+ previewColor = $('.preview').css("background-color", previewColor);
+});
+
+
 function addBox(color) {
   // add a box to the beginning of #colors
   $("#colors").prepend("<div class='item' style='background-color: " + color + ";'><div>");
